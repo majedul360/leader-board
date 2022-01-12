@@ -30,11 +30,12 @@ html {
 
 /* COMMON STYLES  */
 
-    .section-title {
+.section-title {
     color: var(--black);
     font-size: 2rem;
     padding: 3rem 0;
     margin-left: 8%;
+    color: var(--blue);
 }
 
 .col-heading {
@@ -45,6 +46,8 @@ section {
     max-width: 870px;
     margin: 0 auto;
     background:var(--white);
+    padding-bottom: 5rem;
+    border-radius: .5rem;
 }
 
 .grid {
@@ -60,13 +63,55 @@ section {
     gap: 2rem;
 }
 
-.col {
-    flex: 1 1 30rem;
-}
-
 main {
     background: var(--bg);
 }
+
+/* HEADER   */
+
+header {
+    padding: 1.5rem 22%;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    color: var(--white);
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center; gap: .5rem;
+    margin-right: auto;
+}
+
+header .logo .img {
+    width: 40px;
+    height: 50px;
+}
+
+header .logo .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header .navbar a {
+    font-size: 2.5rem;
+    color:var(--white);
+    margin-right: 2rem;
+}
+
+header .profail-img .img {
+    width:51px;
+    height: 51px;
+}
+
+header .profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* PLAYERS SECTION  */
 main section .player-container .player {
@@ -99,16 +144,113 @@ main section .blog-container .blog .img .img-container img{
     object-fit: cover;
 }
 
+main section .blog-container .blog p {
+    color: var(--blue);
+    font-size: 1.7rem;
+    margin-top: .5rem;
+}
+
+main section .blog-container .blog p span {
+    color: var(--white-light);
+    font-size: 1.5rem;
+
+}
+
+/* COURSES SECTION  */
+.course-section {
+    margin-top: 5rem;
+}
+main .course-section .course-container.row {
+    gap: 1rem;
+    margin-left: 4.5rem;
+}
+
+main .course-section .course-container .course {
+    margin: 0 auto;
+    flex: 1 1 20rem;
+}
+
+main .course-section .course-container .course .img {
+    width: 225px;
+    height: 105px;
+    margin-bottom: 1rem;
+}
+
+main .course-section .course-container .course .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .course-section .course-container .course p {
+    color: var(--red);
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+.course-container .course .review-container.row{
+    gap: 1.7rem;
+}
+
+.course-container .course .review-container .review i{
+    color: var(--yellow);
+    font-size: 1.3rem;
+}
+
+.course-container .course .review-container .review i:last-child{
+    color: var(--white-light);
+}
+
+.course-container .course .review-container span {
+    color: var(--white-light);
+    font-size: 1.3rem;
+}
+
+.course-container .course .review-container p {
+    color: var(--red);
+    background: var(--red-background);
+    padding: .2rem 1rem;
+    border-radius: 5rem;
+}
+
+
+
 /* MEDIA QUEARIES */
+@media (max-width:1200px) {
+    header {
+        padding:1.5rem 10%;
+    }
+}
+
 
 @media (max-width:991px) {
     html {
         font-size: 55%;
+    }
+
+    main .course-section .course-container.row {
+        gap: 1rem;
+        margin-left:2.5rem;
     }
 }
 
 @media (max-width:450px) {
     html {
         font-size: 50%;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header .logo{
+        margin: 0;
+    }
+
+    header .navbar a{
+        display: block;
+    }
+
+    main .course-section .course-container.row {
+        gap: 3rem;
     }
 }
