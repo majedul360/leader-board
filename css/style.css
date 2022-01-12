@@ -30,11 +30,11 @@ html {
 
 /* COMMON STYLES  */
 
-.section-title {
+    .section-title {
     color: var(--black);
     font-size: 2rem;
     padding: 3rem 0;
-    margin-left: 10%;
+    margin-left: 8%;
 }
 
 .col-heading {
@@ -57,11 +57,11 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .col {
-    flex: 1 1 20rem;
+    flex: 1 1 30rem;
 }
 
 main {
@@ -76,5 +76,39 @@ main section .player-container .player {
 main section .player-container .player img{
     width: 56px;
     height: 56px;
-    border-radius: 50%;
+}
+
+/* BLOGS SECTION  */
+main section .blog-container.grid {
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap:2rem;
+}
+
+main section .blog-container .blog {
+    margin: 0 auto;
+}
+
+main section .blog-container .blog .img .img-container{
+    width: 117px;
+    height: 117px;
+}
+
+main section .blog-container .blog .img .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MEDIA QUEARIES */
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
 }
